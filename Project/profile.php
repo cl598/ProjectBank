@@ -64,6 +64,23 @@ if (isset($_POST["saved"])) {
             $newUsername = $username;
         }
     }
+
+    $newName = get_name();
+    if(get_name() != $_POST["name"]){
+        $name = $_POST["name"];
+        $stmt = $db->prepare("SELECT COUNT(1) as InUse from Roles where name = :name");
+        $stmt->execute([":name" => $name]);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        $inUse =1;
+        if($result && isset($result["InUse"])){
+            try{
+                $inUse = intval($result["InUse"]);
+            }catch(Exception $e){
+
+            }
+        }
+    }
+
     if ($isValid) {
         $stmt = $db->prepare("UPDATE Users set email = :email, username= :username where id = :id");
         $r = $stmt->execute([":email" => $newEmail, ":username" => $newUsername, ":id" => get_user_id()]);
@@ -112,6 +129,9 @@ if (isset($_POST["saved"])) {
 
     <label for="username">Username</label>
     <input type="text" maxlength="60" name="username" value="<?php safer_echo(get_username()); ?>"/>
+
+    <label for="name">Name</label>
+    <input type="text" name="name" value="<?php safer_echo(get_name());?>"/>
 
     <label for="pw">Password</label>
     <input type="password" name="password"/>

@@ -35,6 +35,12 @@ function get_email() {
     }return "";
 }
 
+function get_name(){
+    if (is_logged_in() && isset($_SESSION["user"]["name"])) {
+        return $_SESSION["user"]["name"];
+    }return "";
+}
+
 function get_user_id() {
     if (is_logged_in() && isset($_SESSION["user"]["id"])) {
         return $_SESSION["user"]["id"];
