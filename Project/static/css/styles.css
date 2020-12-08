@@ -1,0 +1,217 @@
+body {
+    font-family: "Times New Roman", Arial, Lucida, serif;
+    font-size: 2em;
+    background-color: #efcfd4;
+}
+
+p{
+    margin: auto;
+    background-color: #e4a0b7;
+    width: 25%;
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 25px;
+    font-family: "Times New Roman", Arial, Lucida, serif;
+}
+
+ul[class="nav"]{
+    list-style-type: none;
+    margin: 0 0 35px 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #e4a0b7;
+    border: none;
+    border-radius: 10px;
+}
+
+.nav > li {
+    float: left;
+}
+
+.nav > li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+
+}
+
+.nav > li a:hover {
+    background-color: #d5d6ea;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+
+/*Texts*/
+label[for=email]{
+    margin: 35px 0 0 50px;
+    width: 15%;
+    border: none;
+    border-radius: 10px;
+    background-color: #e4a0b7;
+    color: white;
+    font-size: 1em;
+    padding: 5px 25px;
+    font-family: "Times New Roman", Arial, Lucida, serif;
+}
+
+label[for=user]{
+    margin: 35px 0 0 50px;
+    width: 15%;
+    border: none;
+    border-radius: 10px;
+    background-color: #e4a0b7;
+    color: white;
+    font-size: 1em;
+    padding: 5px 25px;
+    font-family: "Times New Roman", Arial, Lucida, serif;
+}
+
+label[for=fname]{
+    margin: 35px 0 0 50px;
+    width: 15%;
+    border: none;
+    border-radius: 10px;
+    background-color: #e4a0b7;
+    color: white;
+    font-size: 1em;
+    padding: 5px 25px;
+    font-family: "Times New Roman", Arial, Lucida, serif;
+}
+
+label[for=lname]{
+    margin: 35px 0 0 50px;
+    width: 15%;
+    border: none;
+    border-radius: 10px;
+    background-color: #e4a0b7;
+    color: white;
+    font-size: 1em;
+    padding: 5px 25px;
+    font-family: "Times New Roman", Arial, Lucida, serif;
+}
+
+label[for=p1]{
+    margin: 35px 0 0 50px;
+    width: 15%;
+    border: none;
+    border-radius: 10px;
+    background-color: #e4a0b7;
+    color: white;
+    font-size: 1em;
+    padding: 5px 25px;
+    font-family: "Times New Roman", Arial, Lucida, serif;
+}
+
+label[for=p2]{
+    margin: 35px 0 0 50px;
+    width: 15%;
+    border: none;
+    border-radius: 10px;
+    background-color: #e4a0b7;
+    color: white;
+    font-size: 1em;
+    padding: 5px 25px;
+    font-family: "Times New Roman", Arial, Lucida, serif;
+}
+
+/*Input boxes*/
+input[type=email]{
+    margin: 35px 0 0 50px;
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    padding: 5px;
+    cursor: pointer;
+    font-family: "Times New Roman", Arial, Lucida, serif;
+}
+
+input[type=text]{
+    margin: 35px 0 0 50px;
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    padding: 5px;
+    cursor: pointer;
+    font-family: "Times New Roman", Arial, Lucida, serif;
+}
+
+input[type=password]{
+    position: static;
+    margin: 35px 0 0 50px;
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    padding: 5px;
+    cursor: pointer;
+    font-family: "Times New Roman", Arial, Lucida, serif;
+}
+
+/*Login submit button*/
+input[type=submit] {
+    margin: 35px 0 50px 0;
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e4a0b7;
+    color: white;
+    font-size: 1em;
+    padding: 5px;
+    cursor: pointer;
+    font-family: "Times New Roman", Arial, Lucida, serif;
+}
+
+/*Email enter*/
+input:nth-of-type(1) {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    border: none;
+    border-radius: 10px;
+    width: 15%;
+}
+
+/*Password enter*/
+input:nth-of-type(2) {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    border: none;
+    border-radius: 10px;
+    width: 15%;
+}
+
+/*Submit button enter*/
+input:nth-of-type(3) {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+}
+
+input:nth-of-type(4) {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+}
+
+input:nth-of-type(5) {
+    margin-left: 25px !important;
+    margin-right: 25px !important;
+}
+
+/*Button Link*/
+button{
+    color: white;
+    text-align: center;
+}
