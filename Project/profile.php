@@ -142,4 +142,4 @@ if (isset($_POST["saved"])) {
     <input type="submit" name="saved" value="Save Profile"/>
 </form>
 
-<?php require(__DIR__ . "/partials/flash.php");
+<?php require(__DIR__ . "/partials/flash.php");?>
