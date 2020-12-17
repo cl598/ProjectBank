@@ -6,7 +6,7 @@ require_once(__DIR__ . "/db.php");
 
 // Office hour assistance
 function getURL($path){
-    return $_SERVER["CONTEXT_PREFIX"] . "/ProjBank/project/$path";
+    return $_SERVER["CONTEXT_PREFIX"] . "/ProjectBank/Project/$path";
 }
 
 function is_logged_in() {
