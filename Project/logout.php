@@ -14,4 +14,4 @@ session_destroy();
 echo "You have successfully logged out!<br>";
 ?>
 
-<?php require(__DIR__ . "/partials/flash.php");
+<?php require(__DIR__ . "/partials/flash.php");?>
