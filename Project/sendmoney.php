@@ -34,7 +34,6 @@
 <?php
 if(isset($_POST["save"])){
 
-    //TODO add proper validation/checks
     $name = $_POST["name"];
     $state = $_POST["state"];
     $actnum = $_POST["account_number"];

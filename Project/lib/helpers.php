@@ -52,10 +52,66 @@ function safer_echo($var) {
         echo "";
         return;
     }
-
     echo htmlspecialchars($var, ENT_QUOTES, "UTF-8");
 }
 
+function get_type($n){
+    if(is_logged_in()){
+        switch ($n) {
+            case 0:
+                // Checking
+                break;
+
+            case 1:
+                // Savings
+                break;
+            case 2:
+                // Loan
+                break;
+            default:
+                echo "Oops, please try again!";
+                break;
+        }
+    }
+}
+
+function get_transaction($amount, $balance){
+    $n = null;
+    get_type($n);
+
+    if(is_logged_in()){
+        switch ($n) {
+            case 0:
+                // Check
+                while($amount < 0 || $amount > $balance){
+                    echo "Oops, please try a different amount!";
+                }
+
+                // Deposit
+                while($amount += $balance){
+                    echo "You have added $amount to your $n account";
+                }
+
+                break;
+
+            case 1:
+                // Check
+                while($amount < 0 || $amount > $balance){
+                    echo "Oops, please try a different amount!";
+                }
+
+                // Withdrawal
+                while($amount -= $balance){
+                    echo "You have took out $amount from your $n account";
+                }
+
+                break;
+            default:
+                echo "Oops, please try again!";
+                break;
+        }
+    }
+}
 // Flash feature
 function flash($msg) {
     if (isset($_SESSION['flash'])) {
@@ -75,22 +131,5 @@ function getMessages() {
     }return array();
 }
 // End flash
-
-function getState($n) {
-    switch ($n) {
-        case 0:
-            echo "Checking";
-            break;
-        case 1:
-            echo "Savings";
-            break;
-        case 2:
-            echo "Loan";
-            break;
-        default:
-            echo "Unsupported state: " . safer_echo($n);
-            break;
-    }
-}
 
 ?>

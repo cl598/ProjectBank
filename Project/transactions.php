@@ -8,13 +8,11 @@
     <button><a style=text-decoration:none href="transfer.php">Transfer here</a></button>
     <button><a style=text-decoration:none href="sendmoney.php">Send money to others</a></button>
 
-
 </form>
 
 <?php
 if(isset($_POST["save"])){
 
-    //TODO add proper validation/checks
     $name = $_POST["name"];
     $state = $_POST["state"];
     $actnum = $_POST["account_number"];

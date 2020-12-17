@@ -7,7 +7,7 @@
 // As an exercise swap these two and see how things change
 if (!is_logged_in()) {
     //this will redirect to login and kill the rest of this script (prevent it from executing)
-    die(header("Location: login.php"));
+    //die(header("Location: login.php"));
 }
 
 $db = getDB();
@@ -125,19 +125,19 @@ if (isset($_POST["saved"])) {
 <form method="POST">
 
     <label for="email">Email</label>
-    <input type="email" name="email" value="<?php safer_echo(get_email()); ?>"/>
+    <input type="email" name="email" value="<?php safer_echo(get_email()); ?>" required/>
 
     <label for="username">Username</label>
-    <input type="text" maxlength="60" name="username" value="<?php safer_echo(get_username()); ?>"/>
+    <input type="text" maxlength="60" name="username" value="<?php safer_echo(get_username()); ?>" required/>
 
     <label for="name">Name</label>
-    <input type="text" name="name" value="<?php safer_echo(get_name());?>"/>
+    <?php safer_echo(get_name());?>
 
     <label for="pw">Password</label>
-    <input type="password" name="password"/>
+    <input type="password" name="password" required/>
 
     <label for="cpw">Confirm password</label>
-    <input type="password" name="confirm"/>
+    <input type="password" name="confirm" required/>
 
     <input type="submit" name="saved" value="Save Profile"/>
 </form>
