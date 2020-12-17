@@ -162,7 +162,7 @@ input[type=password]{
     font-family: "Times New Roman", Arial, Lucida, serif;
 }
 
-/*Login submit button*/
+/**Login submit button*/
 input[type=submit] {
     margin: 35px 0 50px 0;
     width: 250px;
